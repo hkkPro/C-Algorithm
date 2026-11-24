@@ -1,4 +1,4 @@
-\# ESP32 MPU6050 Reader
+# ESP32 MPU6050 Reader
 
 
 
@@ -18,7 +18,7 @@ by integrating gyroscope measurements.
 
 
 
-\# Hardware and Configuration
+# Hardware and Configuration
 
 
 
@@ -32,17 +32,17 @@ by integrating gyroscope measurements.
 
 
 
-\- I2C address: `0x68`.
+- I2C address: `0x68`.
 
-\- I2C clock: 400 kHz.
+- I2C clock: 400 kHz.
 
-\- Connect the sensor and ESP32 to a common ground.
+- Connect the sensor and ESP32 to a common ground.
 
-\- Use suitable I2C pull-up resistors, either on the module
+- Use suitable I2C pull-up resistors, either on the module
 
 &#x20; or externally, with signal levels compatible with ESP32.
 
-\- Power the sensor module according to its specifications.
+- Power the sensor module according to its specifications.
 
 
 
@@ -52,17 +52,17 @@ in `main/main.cpp` to match your wiring.
 
 
 
-\# Running the Project
+# Running the Project
 
 
 
-1\. Open this project directory in an ESP-IDF environment.
+1. Open this project directory in an ESP-IDF environment.
 
-2\. Select the target matching your ESP32 board.
+2. Select the target matching your ESP32 board.
 
-3\. Build and flash the firmware.
+3. Build and flash the firmware.
 
-4\. Open the serial monitor.
+4. Open the serial monitor.
 
 
 
@@ -72,33 +72,33 @@ and estimated angles, with a one-second delay between iterations.
 
 
 
-\# Limitations
+# Limitations
 
 
 
-\- The X/Y angles are estimates based on acceleration and
+- The X/Y angles are estimates based on acceleration and
 
 &#x20; are affected by motion and vibration.
 
-\- The Z angle is relative to the initial state, not an absolute
+- The Z angle is relative to the initial state, not an absolute
 
 &#x20; heading, and accumulates drift.
 
-\- No sensor calibration or sensor fusion is implemented.
+- No sensor calibration or sensor fusion is implemented.
 
-\- The gyroscope conversion uses a sensitivity of 131 LSB/(degree/s),
+- The gyroscope conversion uses a sensitivity of 131 LSB/(degree/s),
 
 &#x20; assuming the default ±250 degree/s range. The code does not
 
 &#x20; explicitly configure this range.
 
-\- The slow sampling loop is intended for learning and basic
+- The slow sampling loop is intended for learning and basic
 
 &#x20; observation rather than accurate tracking of fast motion.
 
 
 
-\## Learning Context
+# Learning Context
 
 
 
